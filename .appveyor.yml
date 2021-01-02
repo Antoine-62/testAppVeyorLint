@@ -1,0 +1,24 @@
+# Test against the latest version of this Node.js version
+environment:
+  nodejs_version: "10"
+
+# Install scripts. (runs after repo cloning)
+install:
+  - ps: Install-Product node $env:nodejs_version
+  # Output useful info for debugging.
+  # we should be using NPM v6+
+  - node --version
+  - npm --version
+
+cache:
+  # cache NPM packages
+  # and invalidate the cache when package.json file changes
+  # https://www.appveyor.com/docs/build-cache/
+  - '%AppData%\npm -> package.json'
+
+# Post-install test scripts.
+test_script:
+  - npm run lint
+
+# Don't actually build.
+build: off
