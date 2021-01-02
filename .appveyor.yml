@@ -9,6 +9,7 @@ install:
   # we should be using NPM v6+
   - node --version
   - npm --version
+  - npm install
 
 cache:
   # cache NPM packages
