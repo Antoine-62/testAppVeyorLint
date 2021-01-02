@@ -1,5 +1,5 @@
 # frontend
-
+[![Build status](https://ci.appveyor.com/api/projects/status/t8lrjsme1y782li9/branch/main?svg=true)](https://ci.appveyor.com/project/Antoine-62/testappveyorlint/branch/main)
 ## Project setup
 ```
 npm install
